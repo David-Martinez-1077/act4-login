@@ -105,11 +105,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Color(0xFF2962FF),
                       padding: EdgeInsets.symmetric(
-                        horizontal: 100,
-                        vertical: 12,
+                        horizontal:
+                            100, // Mismo ancho que el botón de "Iniciar sesión"
+                        vertical: 12, // Misma altura
                       ),
+                      shape: RoundedRectangleBorder(
+                        // Bordes redondeados
+                        borderRadius: BorderRadius.circular(
+                            10), // Mismo radio que el botón de login
+                      ),
+                      elevation:
+                          0, // Sin sombra (opcional, si prefieres el estilo plano)
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
